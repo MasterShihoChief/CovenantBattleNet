@@ -1,0 +1,246 @@
+/* Header */
+
+body header, body footer {
+  background-color: #01002a;   
+  color:            #BF7F13;
+  padding:          10px 0px;
+}
+
+body header {
+  padding: 0 10px;
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 135px;
+}
+
+body header h1 {
+  background-color: #39095D;  
+  border-radius: 0 0 80px 80px;
+  padding: 10px;
+  padding-left: 40px;
+  height: 55px;
+  box-shadow: 0 0 5px 5px #888;
+}
+
+body header h1::first-letter {
+  font-size:   2.5em;
+  font-family: AlienCaret Regular;
+  padding-right: 5px;
+  float: left;
+}
+
+body header h2 {
+  text-transform: lowercase;
+  font-family: cursive;
+  font-size: 1em;
+  position: relative;
+  font-weight: normal;
+  top: -30px;
+  left: 100px;
+}
+
+body header h2::before {
+  content: "(";
+}
+
+body header h2::after {
+  content: ")";
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+  width:   300px;
+  padding: 5px;
+  color: #FFFFFF;
+  font-size: 1.5em;
+ border-right: 1px dotted #0E3745;
+}
+
+nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #0E3745;
+
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+
+
+/* Footer */
+body footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+
+
+/* Headings */
+h1 {
+  font-size: 2.0em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+body header input {
+  position: fixed;
+  right: 30px;
+  top:   10px;
+  padding:   0px 15px;
+  border-radius: 15px;
+  width:     150px;
+  
+
+}
+
+div h1 {
+  color: #0E3745;
+  font-size: 2.5em;
+}
+
+table {
+  margin: auto;
+  width: 100%;
+}
+
+table td {
+  padding: 5px 15px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #CCCCCC;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #AAAAAA;
+}
+
+tbody tr:hover {
+  background-color: orange;
+  border: dotted 1px #FFFFFF;
+}
+
+tbody tr td:nth-child(2) {
+  font-size: 0.75em;
+}
+
+tbody tr td:nth-child(3) {
+  font-size: 1.15em;
+}
+
+:target {  
+  background-color: yellow;
+}
+
+
+#content-area {
+  padding: 200px 20px 100px 20px;
+  background-color:#01002a;
+}
+
+#content-area > p {
+  text-indent: 20px;
+  margin-bottom: 30px;
+  background-color: #6B3A90;
+  border-radius: 10px;
+  font-size: 1.1em;
+  padding: 10px;
+
+}
+
+fieldset {
+  border: 1px solid #000000;
+}
+
+label {
+  width: 200px;
+  padding-left: 10px;
+  padding-right: 50px;
+}
+
+input {
+  width: 300px;
+}
+
+a[href^="mailto"]::before {
+  content: "\0260e";
+  font-size: 40px;
+  color: #000000;
+}
+
+.person h1 {
+  font-size: 1.2em;
+
+}
+/* Bookmarks */
+dl {
+  margin: 20px;
+}
+
+dl dt {
+  color: #FFFFFF;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px;
+  margin: 20px 0px 10px 0px;
+  background-color: #0E3745; 
+  border-radius: 10px;
+  font-family: cursive;
+  box-shadow: 0 0 5px 5px #888;
+}
+
+dl dt::after {
+  content: ":";
+}
+
+dl dd {
+  margin-left: 20px;
+}
+
+dl dd:nth-of-type(3) {
+  font-size: 3.0em;
+  color: yellow;
+
+}
+
+dl dd:last-child {
+  line-height: 1.0;
+}
+
+dl dd:last-child::first-letter {
+  font-size: 3.5em;
+  font-family: fantasy;
+  float: left;
+  margin-right: 10px;
+  font-weight: bolder;
+  color: #FFFFFF;
+  background-color: #000000;
+  padding: 10px;
+}
+
+dl dd:last-child::first-line {
+  font-weight: bold;
+  font-size: 1.25em;
+  line-height: 1.25;
+}
+
+a[href^="http://"]::after {
+  content: "\02197";
+  font-size: 1.5em;
+}
