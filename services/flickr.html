@@ -1,5 +1,46 @@
-#!/usr/bun/env ruby
+#!/usr/bin/env ruby
 
+require 'open-uri'
 puts "Content-type: text/html"
 puts
 puts "Hello dynamic world -- #{Time.now}"
+puts 
+puts<!Doctype HTML>
+puts<html>
+puts<head>
+puts<title>The Covenant Battle Net</title>
+puts<link rel="shortcut icon" href="../favicon.ico" >
+puts <meta charset="utf-8">
+puts  <link rel="stylesheet" type="text/css" href="../CBNHC.css">
+puts<script language="JavaScript">
+puts// This script sets OSName variable as follows:
+puts// "Windows"    for all versions of Windows
+puts// "MacOS"      for all versions of Macintosh OS
+puts// "Linux"      for all versions of Linux
+puts// "UNIX"       for all other UNIX flavors 
+puts// "Unknown OS" indicates failure to detect the OS
+
+puts if (navigator.appVersion.indexOf("Mac")!=-1) window.location=("../MacDetect.html");
+puts if (navigator.appVersion.indexOf("X11")!=-1) window.location=("../MacDetect.html");
+
+puts</script>
+puts</head>
+puts<body>
+puts<header>
+ puts<hgroup>
+puts<h1>The Covenant Battle Net</h1>
+    puts  <h2>A member of the Silver Star Alliance</h2>
+    puts</hgroup>
+	puts <nav>
+     puts <ul>
+       puts <li><a href="../index.html">Central Command</a></li>
+       puts <li><a href="../login.html">Login/Registration</a></li>
+       puts <li><a href="../Information.html">Information</a></li>
+       puts <li><a href="../tags/chico.html">Tags</a></li>
+      puts</ul>
+    puts</nav>
+	puts<h3>Welcome to the Covenant Social Media Center</h3>
+	puts<h4> <img src="../2.jpg" width="64" height="52"></h4>
+	puts</header>
+	puts<div id="content-area">
+
