@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'open-uri'
+require 'json'
 puts "Content-type: text/html"
 puts
 puts "Hello dynamic world -- #{Time.now}"
@@ -9,19 +10,19 @@ puts"<!Doctype HTML>"
 puts"<html>"
 puts"<head>"
 puts"<title>The Covenant Battle Net</title>"
-puts"<link rel="shortcut icon" href="../favicon.ico" >"
-puts "<meta charset="utf-8">"
-puts  "<link rel="stylesheet" type="text/css" href="../CBNHC.css">"
-puts"<script language="JavaScript">"
+puts "<link rel=\"shortcut icon\" href=\"../favicon.ico\">"
+puts "<meta charset=\"utf-8\">"
+puts  "<link rel=\"stylesheet\" type=\"text/css\" href=\"../CBNHC.css\">"
+puts"<script language=\"JavaScript\">"
 puts"// This script sets OSName variable as follows:"
-puts"// "Windows"    for all versions of Windows"
-puts"// "MacOS"      for all versions of Macintosh OS"
-puts"// "Linux"      for all versions of Linux"
-puts"// "UNIX"       for all other UNIX flavors" 
-puts"// "Unknown OS" indicates failure to detect the OS"
+puts"// \"Windows\"    for all versions of Windows"
+puts"// \"MacOS\"      for all versions of Macintosh OS"
+puts"// \"Linux\"      for all versions of Linux"
+puts"// \"UNIX\"       for all other UNIX flavors" 
+puts"// \"Unknown OS\" indicates failure to detect the OS"
 
-puts "if (navigator.appVersion.indexOf("Mac")!=-1) window.location=("../MacDetect.html");"
-puts "if (navigator.appVersion.indexOf("X11")!=-1) window.location=("../MacDetect.html");"
+puts "if (navigator.appVersion.indexOf(\"Mac\")!=-1) window.location=(\"../MacDetect.html\");"
+puts "if (navigator.appVersion.indexOf(\"X11\")!=-1) window.location=(\"../MacDetect.html\");"
 
 puts"</script>"
 puts"</head>"
@@ -33,24 +34,30 @@ puts"<h1>The Covenant Battle Net</h1>"
     puts"</hgroup>"
 	puts "<nav>"
      puts "<ul>"
-       puts "<li><a href="../index.html">Central Command</a></li>"
-       puts "<li><a href="../login.html">Login/Registration</a></li>"
-       puts "<li><a href="../Information.html">Information</a></li>"
-       puts "<li><a href="../tags/chico.html">Tags</a></li>"
+       puts "<li><a href=\"../index.html\">Central Command</a></li>"
+       puts "<li><a href=\"../login.html\">Login/Registration</a></li>"
+       puts "<li><a href=\"../Information.html\">Information</a></li>"
+       puts "<li><a href=\"../tags/chico.html\">Tags</a></li>"
       puts"</ul>"
     puts"</nav>"
 	puts"<h3>Welcome to the Covenant Social Media Center</h3>"
-	puts"<h4> <img src="../2.jpg" width="64" height="52"></h4>"
+	puts"<h4> <img src=\"../2.jpg\" width=\"64\" height=\"52\"></h4>"
 	puts"</header>"
-	puts"<div id="content-area">"
+	puts"<div id=\"content-area\">"
+	
+	url = open("http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=e741520bb190e94c147669e9aafff60b&per_page=20&page=1&nojsoncallback=1")
+	photos = json.parse(url.read)
+	
+	puts photos
+	
 puts"</div>"
 
 puts"</body>"
-puts"<footer id="footer">"
+puts"<footer id=\"footer\">"
     puts"&copy; Copyright Joshua Hunter,2012"
 	puts"&copy; Copyright Starlight Studios, 2012"
 	puts"<p>&copy; Copyright Covenant Battle Net High Command, Central Command Fortress Daedalus</p>"
 	puts"<div>&copy; Copyright Vector Industries</div>"
   puts"</footer>"
 puts"</html>"
-end
+$end
