@@ -46,9 +46,14 @@ puts"<h1>The Covenant Battle Net</h1>"
 	puts"<div id=\"content-area\">"
 	
 	url = open("http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=e741520bb190e94c147669e9aafff60b&per_page=20&page=1&nojsoncallback=1")
-	photos = json.parse(url.read)
-	
-	puts photos
+	raw = JSON.parse(url.read)
+	photos = raw['photos']
+	$i = 0;
+	while $i < 20 do
+		puts "<a href=\"http://www.flickr.com/photos/"+photos[$i]['owner']+"/"+photos[$i]['id']+">";
+		puts "<img src=\"http://farm"+photos[$i]['farm']+".staticflickr.com/"+photos[$i]['server']+"/"+photos[$i]['id']+"_"+photos[$i]['secret']+"_s.jpg\"></a></p>";
+		$i +=1;
+	end
 	
 puts"</div>"
 
