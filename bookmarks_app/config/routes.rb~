@@ -57,8 +57,9 @@ BookmarksApp::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   
   resources :bookmarks
-  resources :users
-  
   root :to => "bookmarks#index"
-  match 'signup' => "users#index"
+  
+  resources :users
+  match '/signup' => 'users#index'
+end
 end
