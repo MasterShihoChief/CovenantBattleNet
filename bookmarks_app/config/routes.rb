@@ -60,4 +60,5 @@ BookmarksApp::Application.routes.draw do
   resources :users
   
   root :to => "bookmarks#index"
+  match "signup" => "users#index"
 end
