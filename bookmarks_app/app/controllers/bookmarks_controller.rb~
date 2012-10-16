@@ -12,7 +12,7 @@ class BookmarksController < ApplicationController
 
   def create
 
-    redirect_to bookmarks_url, :notice => "Created successfully"
+    #redirect_to bookmarks_url, :notice => "Created successfully"
 
     # @forum = params[:forum]
 

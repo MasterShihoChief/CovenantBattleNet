@@ -1,0 +1,32 @@
+<%= form_for :bookmark, :url => bookmarks_path do |f| %>
+
+  <p>
+    <%= f.label :name, "Bookmark Name" %>
+    <%= f.text_field  :name, :required => true %>
+  </p>
+  
+  <p>
+    <%= f.label :burl, "Bookmark URL" %>
+    <%= f.text_field  :burl, :required => true %>
+  </p>  
+  <p>
+    <%= f.label :description, "Bookmark Description" %>
+    <%= f.text_area  :description, :required => true %>
+  </p>
+  <p>
+    <%= f.label :rating, "Bookmark Rating" %>
+    <%= f.text_field :rating, :required => true %>
+  </p>
+    <p>
+    <%= f.label :permissions, "Public or Private" %>
+    <%= f.text_field  :permissions, :required => true %>
+  </p>  
+    <p>
+    <%= f.label :tags, "Bookmark URL" %>
+    <%= f.text_area  :tags, :required => true %>
+  </p>  
+
+  <%= submit_tag "Create" %>
+  
+
+<% end %>

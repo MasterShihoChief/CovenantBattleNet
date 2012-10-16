@@ -1,0 +1,17 @@
+<%= form_for :user, form_options do |f| %>
+
+  <p>
+    <%= f.label :username, "Username" %>
+    <%= f.text_field  :username, :required => true %>
+  </p>
+
+  <p>
+   <p>
+    <%= f.label :password, "VERY INSECURE PASSWORD" %>
+    <%= f.text_field  :password, :required => true %>
+  </p>
+   
+  <%= submit_tag "Login",link_to user[:username], user_path(index) %>
+  
+
+<% end %>

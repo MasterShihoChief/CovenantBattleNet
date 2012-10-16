@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def index
    # @users = all_users
-    #redirect_to user_url, :notice => "Logged in successfully"
+    redirect_to user_url, :notice => "Logged in successfully"
   end
 
   def show

@@ -25,25 +25,8 @@
 	</header>
 	<div id="content-area">
 			<p>
-<%= render :partial => "form", :locals => {:form_options => {:url => users_path}} %>
+    <%= render :partial => "form", :locals => {:form_options => {:url => users_path}} %>
 
-<%= form_for :user, :url => users_path do |f| %>
-
-  <p>
-    <%= f.label :login, "Username" %>
-    <%= f.text_field  :login, :required => true %>
-  </p>
-
-  <p>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </p>
-
- 
-  <%= submit_tag "Login" %>
-  
-
-<% end %>
 
 			<%=link_to "Not a user?! How dare you! Lucky for you, Registration is open!", new_user_path %>
 			</p>
